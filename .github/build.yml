@@ -1,0 +1,17 @@
+name: Deploy GitLab Repo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout GitLab repo
+      uses: actions/checkout@v2
+      with:
+        repository: gitlab-username/gitlab-repo
+        token: ${{ secrets.GITLAB_PAT }}
+
+    - name: Deploy
+      run: echo "Add your deployment steps here"
