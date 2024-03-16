@@ -1,0 +1,9 @@
+<form class="form-container">
+    <label for="username">Felhasználónév:</label>
+    <input type="text" id="username" name="username" #usernameInput>
+    <br class="big-break">
+    <label for="password">Jelszó:</label>
+    <input type="password" id="password" name="password" #passwordInput>
+    <br class="big-break">
+    <button (click)="login(usernameInput.value, passwordInput.value)">Bejelentkezés</button>
+</form>

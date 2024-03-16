@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/themes/mytheme/theme.scss";
+@import "primeng/resources/primeng.css";
+@font-face {
+  font-family: 'Inika';
+  src: url('./assets/resources/fonts/Inika-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Inika';
+  src: url('./assets/resources/fonts/Inika-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+html {
+  height: 100%;
+  border: 10px solid #765827;
+}
+
+body {
+    margin: 0;
+}
+
+.leaflet-marker-icon {
+    border-radius: 50%;
+    border: solid 2px $textColor;
+
+    .tooltip {
+        display: none;
+        position: absolute;
+        width: max-content;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #333;
+        border: 1px solid $textColor;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    &:hover .tooltip {
+        display: block;
+    }
+
+    .image {
+        border-radius: 50%;
+    }
+}
+
+.leaflet-marker-pane img {
+    width: 100% !important;
+    height: 100% !important;
+}

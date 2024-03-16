@@ -1,0 +1,17 @@
+<h1>Hello</h1>
+<p-card header="Card title">
+  <p>Lorem ipsum egyetem rósz.</p>
+  <ng-template pTemplate="footer">
+    <p-button label="Confirm" icon="pi pi-check"></p-button>
+    <p-button
+      label="Cancel"
+      icon="pi pi-times"
+      styleClass="p-button-secondary"
+    ></p-button>
+  </ng-template>
+</p-card>
+<p-button routerLink="/register" label="Register"></p-button>
+<p-button routerLink="/login" label="Login"></p-button>
+<p-button routerLink="/sidemenu" label="Sidemenu test"></p-button>
+
+<p-button (click)="onClick()" label="Dummy"></p-button>

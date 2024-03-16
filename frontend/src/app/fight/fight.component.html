@@ -1,0 +1,85 @@
+<div class="fight-container">
+    <h2>Fight Arena</h2>
+    <h3>A Széchenyi téri Kéregető</h3>
+    <div class="combatants">
+        <div class="player">
+            <img [src]="player.imageUrl" alt="Player Avatar">
+            <div class="character-info">
+                <p>{{ player.name }}</p>
+                <div class="health-bar">
+                    <div class="health-fill"
+                        [style.background-color]="getHealthBarColor(player.healthPoints, player.maxHealthPoints)"
+                        [style.width.%]="(player.healthPoints / player.maxHealthPoints) * 100">
+                    </div>
+                    <div class="health-text">{{ player.healthPoints }}/{{ player.maxHealthPoints }}</div>
+                </div>
+            </div>
+            <div class="attribute">
+                <ul class="attribute-list">
+                    <li class="attribute-item">
+                        <span class="attribute-label">Kitartás</span>
+                        <span class="attribute-value">{{ player.attributes.endurance }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Szorgalom</span>
+                        <span class="attribute-value">{{ player.attributes.loyalty }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Intelligencia</span>
+                        <span class="attribute-value">{{ player.attributes.intelligence }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Ügyesség</span>
+                        <span class="attribute-value">{{ player.attributes.agility }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Szerencse</span>
+                        <span class="attribute-value">{{ player.attributes.luck }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="enemy">
+            <img [src]="enemy.imageUrl" alt="Enemy Avatar">
+            <div class="character-info">
+                <p>{{ enemy.name }}</p>
+                <div class="health-bar">
+                    <div class="health-fill"
+                        [style.background-color]="getHealthBarColor(enemy.healthPoints, enemy.maxHealthPoints)"
+                        [style.width.%]="(enemy.healthPoints / enemy.maxHealthPoints) * 100">
+                    </div>
+                    <div class="health-text">{{ enemy.healthPoints }}/{{ enemy.maxHealthPoints }}</div>
+                </div>
+            </div>
+            <div class="attribute">
+                <ul class="attribute-list">
+                    <li class="attribute-item">
+                        <span class="attribute-label">Kitartás</span>
+                        <span class="attribute-value">{{ enemy.attributes.endurance }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Szorgalom</span>
+                        <span class="attribute-value">{{ enemy.attributes.loyalty }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Intelligencia</span>
+                        <span class="attribute-value">{{ enemy.attributes.intelligence }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Ügyesség</span>
+                        <span class="attribute-value">{{ enemy.attributes.agility }}</span>
+                    </li>
+                    <li class="attribute-item">
+                        <span class="attribute-label">Szerencse</span>
+                        <span class="attribute-value">{{ enemy.attributes.luck }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button (click)="startFight()">Átugrás</button>
+    <div class="battle-log" *ngIf="battleLog.length > 0">
+        <p *ngFor="let log of battleLog">{{ log }}</p>
+    </div>
+</div>

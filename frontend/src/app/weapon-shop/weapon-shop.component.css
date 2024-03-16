@@ -1,0 +1,9 @@
+.magic-shop-container {
+    background-image: url(../../assets/images/weapon-shop-bg.png);
+    background-size: cover;
+  }
+  
+  .magic-shopkeeper-container {
+    background-image: url(../../assets/images/magic-shopkeeper.png);
+    background-size: cover;
+  }

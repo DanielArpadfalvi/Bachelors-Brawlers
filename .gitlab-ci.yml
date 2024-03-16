@@ -1,0 +1,24 @@
+stages:
+  - build
+
+backend-build:
+  stage: build
+  image: maven:latest
+  script:
+    - cd backend
+    - mvn clean install -DskipTests=true
+  #artifacts:
+  #  paths:
+  #    - backend/target/*.jar
+
+frontend-build: 
+  stage: build
+  image: node:latest
+  script:
+    - cd frontend
+    - npm install
+    - npm run build
+  #artifacts:
+  #  paths:
+  #    - frontend/build
+

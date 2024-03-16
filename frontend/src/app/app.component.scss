@@ -1,0 +1,105 @@
+.register-heading {
+  color: darkgoldenrod;
+}
+
+.form-container {
+  max-width: 600px;
+  min-width: 450px;
+  width: fit-content;
+  margin: auto;
+  padding: 40px 0px;
+
+  &,
+  .form-interior {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dotted purple;
+  }
+
+  .form-interior {
+    padding: 20px 50px;
+  }
+}
+
+.small-break {
+  margin-bottom: 20px;
+}
+
+.big-break {
+  margin-bottom: 40px;
+}
+
+.register-button {
+  padding: 15px 40px;
+}
+
+.login-link {
+  color: darkgoldenrod;
+}
+
+// --Shop Style Below--
+
+.shop-container {
+  margin: 2vh 2vw;
+  height: 96vh;
+  width: 96vw;
+  display: flex;
+}
+
+.sidebar-container {
+  width: 255px;
+}
+
+.shop-right-container {
+  display: flex;
+  width: 100%;
+}
+
+.character-profile-container {
+  width: 50%;
+  height: 100%;
+}
+
+.shop-panel-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-container {
+  height: 20%;
+}
+
+.shopkeeper-container {
+  height: 45%;
+}
+
+.new-goods-container {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.new-goods-button {
+  height: 100%;
+}
+
+.shop-items-container {
+  height: 30%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+  justify-items: center;
+  align-items: center;
+}
+
+.item-image {
+  width: 110px;
+  height: 110px;
+  background-color: black;
+}
+
+// --Shop Style Ends--

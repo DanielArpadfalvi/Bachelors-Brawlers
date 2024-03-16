@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+.fight-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url("/assets/img/szecheny.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h2 {
+        color: #FFE500;
+        margin-bottom: 0 !important;
+    }
+
+    h3 {
+        margin-top: 0 !important;
+        color: #f0d800;
+    }
+
+    .combatants {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Inika", serif;
+        font-weight: 400;
+        font-style: normal;
+
+        .player,
+        .enemy {
+            background-color: #C8AE7D;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            border: 2px solid #000;
+            font-family: "Inika", sans-serif;
+
+            img {
+                width: 300px;
+                min-height: 300px;
+                padding: 15px;
+            }
+
+            .character-info {
+                p {
+                    font-weight: bold;
+                    margin-top: 0;
+                    font-size: 25px;
+                    margin: auto 50px;
+                }
+
+                .health-bar {
+                    display: flex;
+                    text-align: center;
+                    width: 100%;
+                    height: 30px;
+                    background-color: #ddd;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    position: relative;
+
+                    .health-fill {
+                        height: 100%;
+                        border-radius: 10px;
+                        background-color: green;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .health-text {
+                        font-weight: bold;
+                        font-size: 16px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+            }
+
+            .attribute {
+                width: 88%;
+
+                ul.attribute-list {
+                    list-style-type: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    li.attribute-item {
+                        margin-bottom: 10px;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .attribute-label {
+                            margin-right: 10px;
+                        }
+
+                        .attribute-value {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .versus {
+            font-size: 24px;
+            margin: 0 10rem;
+        }
+    }
+
+    button {
+        margin-top: 10px;
+        border: none;
+        color: white;
+        padding: 7px 54px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #65451F;
+    }
+
+    .battle-log {
+        margin-top: 20px;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+
+        p {
+            margin: 5px 0;
+        }
+    }
+}

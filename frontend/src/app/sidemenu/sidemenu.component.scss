@@ -1,0 +1,70 @@
+.sidebar {
+  background-color: #eac696;
+  width: 255px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 10px solid #765827;
+  border-bottom: 50px solid #765827;
+
+  .separator {
+    padding: 5px 0px 15px;
+    width: 100%;
+  }
+
+  .top-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Inika", "Times New Roman", Times, serif;
+    img {
+      margin-right: 10px;
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+  .money-container {
+    display: flex;
+    flex-direction: column;
+
+    .money,
+    .extra-money {
+      margin: 0;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #c8ae7d;
+    color: #333;
+    cursor: pointer;
+    font-family: "Inika", "Times New Roman", Times, serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: bisque;
+    }
+  }
+}
+
+.map {
+  position: fixed;
+  top: 0;
+  left: 255px;
+  width: calc(100% - 255px);
+  height: 100%;
+  border-top: 10px solid #765827;
+  border-bottom: 10px solid #765827;
+  border-right: 10px solid #765827;
+}
